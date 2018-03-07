@@ -10,20 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var lipCountLabel: UILabel!
-    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet private weak var lipCountLabel: UILabel!
+    @IBOutlet private var cardButtons: [UIButton]!
     
-    // Lazy var means that object will be initialize when someoen have to use this object, not at this line. And lazy can't have property observer.
-    lazy var game = Memories(numberOfPairsOfChards: (cardButtons.count) / 2, withSuffle: 30)
+    // Lazy var means that object will be initialize when someone has to use this object, not at this line. And lazy can't have property observer like filpCount prop.
+    private lazy var game = Memories(numberOfPairsOfChards: numberOfPairsCards, withSuffle: 30)
+    
+    // Computed prop
+    var numberOfPairsCards: Int {
+        get {
+            return (cardButtons.count + 1) / 2
+        }
+    }
     
     // Prop observer
-    var flipCount = 0 {
+    private(set) var flipCount = 0 {
         didSet {
             lipCountLabel.text = "Flips: \(flipCount)"
         }
     }
-    var emojiChoices = ["👹","💩","👻","😈","😸","🎃","💩","🤖"]
-    var emoji = [Int : String]()
+    private var emojiChoices = ["👹","💩","👻","😈","😸","🎃","😂","🤖"]
+    private var emoji = [Card : String]()
     
     
     override func viewDidLoad() {
@@ -41,6 +48,9 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func newGameAction(_ sender: Any) {
+        newGame()
+    }
     
     func updateViewFromModel(){
         for index in cardButtons.indices {
@@ -56,10 +66,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+    private func emoji(for card: Card) -> String {
+        if emoji[card] == nil, emojiChoices.count > 0 {
+            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4random)
         }
         
 //        if emoji[card.identifier] != nil {
@@ -69,7 +78,27 @@ class ViewController: UIViewController {
 //        }
         
         // This line of code raplace all if else.
-        return emoji[card.identifier] ?? "?"
+        return emoji[card] ?? "?"
+    }
+    
+    private func newGame(){
+        game.removeGame()
+        emoji.removeAll()
+        flipCount = 0
+        game = Memories(numberOfPairsOfChards: (cardButtons.count + 1) / 2, withSuffle: 20)
+        updateViewFromModel()
+    }
+}
+
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
     }
 }
 
