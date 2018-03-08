@@ -14,17 +14,12 @@ class Memories {
     
     private var indexOneAndOnlyFaceUpCard: Int? {
         get {
-            var foundIndex: Int?
-            for index in cards.indices {
-                if cards[index].isFaceUp {
-                    if foundIndex == nil {
-                        foundIndex = index
-                    } else {
-                        return nil
-                    }
-                }
-            }
-            return foundIndex
+            // This gives just first one that has index or nil. See oneAndOnly var in Extension
+            return cards.indices.filter({cards[$0].isFaceUp}).oneAndOnly
+            
+            // Get the index of card that just have isFaceUp = true (This hapends with out extension of Collection)
+//            let faceUpCardInidces = cards.indices.filter({cards[$0].isFaceUp})
+//            return faceUpCardInidces.count == 1 ? faceUpCardInidces.first : nil
         }
         set {
             for index in cards.indices {
@@ -51,7 +46,7 @@ class Memories {
     }
     
     init(numberOfPairsOfChards : Int, withSuffle count: Int) {
-        assert(numberOfPairsOfChards < 1, "Memories.init(a \(numberOfPairsOfChards)): you must have at least one pair of cards")
+        assert(numberOfPairsOfChards > 0, "Memories.init(a \(numberOfPairsOfChards)): you must have at least one pair of cards")
         for _ in 1...numberOfPairsOfChards {
             let card = Card()
             cards += [card, card]
@@ -77,5 +72,12 @@ class Memories {
     func removeGame(){
         self.cards.removeAll()
         self.indexOneAndOnlyFaceUpCard = nil
+    }
+}
+
+extension Collection {
+
+var oneAndOnly: Element? {
+    return count == 1 ? first : nil
     }
 }

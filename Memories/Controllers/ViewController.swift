@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     // Prop observer
     private(set) var flipCount = 0 {
         didSet {
-            lipCountLabel.text = "Flips: \(flipCount)"
+            updateLabel()
         }
     }
     private var emojiChoices = ["👹","💩","👻","😈","😸","🎃","😂","🤖"]
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateLabel()
     }
     
     
@@ -50,6 +51,15 @@ class ViewController: UIViewController {
     
     @IBAction func newGameAction(_ sender: Any) {
         newGame()
+    }
+    
+    private func updateLabel() {
+        let attribute : [NSAttributedStringKey : Any] = [
+            .strokeWidth : 5.0,
+            .strokeColor : UIColor.orange
+        ]
+        let attributeString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attribute)
+        lipCountLabel.attributedText = attributeString
     }
     
     func updateViewFromModel(){

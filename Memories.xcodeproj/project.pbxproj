@@ -14,6 +14,8 @@
 		8B0AFE46204EC979005D44B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AFE44204EC979005D44B6 /* LaunchScreen.storyboard */; };
 		8B0AFE4F204ECB78005D44B6 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFE4E204ECB78005D44B6 /* Memories.swift */; };
 		8B0AFE51204ECB8E005D44B6 /* Chard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AFE50204ECB8E005D44B6 /* Chard.swift */; };
+		8B8B8CDA20515C06000D0585 /* FirstViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B8CD920515C06000D0585 /* FirstViewContorller.swift */; };
+		8B8B8CDC20515C12000D0585 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B8CDB20515C12000D0585 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8B0AFE47204EC979005D44B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0AFE4E204ECB78005D44B6 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
 		8B0AFE50204ECB8E005D44B6 /* Chard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chard.swift; sourceTree = "<group>"; };
+		8B8B8CD920515C06000D0585 /* FirstViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewContorller.swift; sourceTree = "<group>"; };
+		8B8B8CDB20515C12000D0585 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,9 @@
 		8B0AFE53204ECBF9005D44B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B8B8CDB20515C12000D0585 /* SecondViewController.swift */,
 				8B0AFE3D204EC979005D44B6 /* ViewController.swift */,
+				8B8B8CD920515C06000D0585 /* FirstViewContorller.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8B8CDC20515C12000D0585 /* SecondViewController.swift in Sources */,
 				8B0AFE51204ECB8E005D44B6 /* Chard.swift in Sources */,
 				8B0AFE3E204EC979005D44B6 /* ViewController.swift in Sources */,
+				8B8B8CDA20515C06000D0585 /* FirstViewContorller.swift in Sources */,
 				8B0AFE4F204ECB78005D44B6 /* Memories.swift in Sources */,
 				8B0AFE3C204EC979005D44B6 /* AppDelegate.swift in Sources */,
 			);
