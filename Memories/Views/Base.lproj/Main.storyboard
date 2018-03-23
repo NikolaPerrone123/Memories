@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FDC-ns-2l4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VnD-IQ-Nhk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -318,6 +318,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rS8-Qa-kav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-59.200000000000003" y="135.832083958021"/>
+        </scene>
+        <!--Example View Controller-->
+        <scene sceneID="TuI-DW-DG8">
+            <objects>
+                <viewController id="VnD-IQ-Nhk" customClass="ExampleViewController" customModule="Memories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EZS-AR-MlK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k19-KV-uCR">
+                                <rect key="frame" x="73" y="53" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="Jp8-i7-lA5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-mk-JVI">
+                                <rect key="frame" x="33" y="212" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="V21-pJ-ciF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJA-7x-CCc">
+                                <rect key="frame" x="205" y="210" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="ObD-Qs-Egg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-zT-jKR">
+                                <rect key="frame" x="181" y="299" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="pNT-kx-b9r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-e3-Ys8">
+                                <rect key="frame" x="128" y="376" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="sSA-CQ-Eay"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3A-Uf-XFA">
+                                <rect key="frame" x="36" y="485" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="eHE-5t-rcQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG0-eD-cUB">
+                                <rect key="frame" x="171" y="558" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="fUf-vt-dZH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJL-vh-87T">
+                                <rect key="frame" x="240" y="456" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.93209453249999996" green="0.51937711789999996" blue="0.0019281797230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clicked:" destination="VnD-IQ-Nhk" eventType="touchUpInside" id="V3R-8a-LE7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="3cV-fx-dOh"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="views" destination="k19-KV-uCR" collectionClass="NSMutableArray" id="Pz7-ap-dut"/>
+                        <outletCollection property="views" destination="zL4-mk-JVI" collectionClass="NSMutableArray" id="GVr-X7-Yf7"/>
+                        <outletCollection property="views" destination="xJA-7x-CCc" collectionClass="NSMutableArray" id="gBt-Uz-F3Q"/>
+                        <outletCollection property="views" destination="0vU-zT-jKR" collectionClass="NSMutableArray" id="68t-wQ-iA1"/>
+                        <outletCollection property="views" destination="9zh-e3-Ys8" collectionClass="NSMutableArray" id="2BW-Hx-T6L"/>
+                        <outletCollection property="views" destination="l3A-Uf-XFA" collectionClass="NSMutableArray" id="QT6-1h-Dz7"/>
+                        <outletCollection property="views" destination="pJL-vh-87T" collectionClass="NSMutableArray" id="HcU-Wr-IEZ"/>
+                        <outletCollection property="views" destination="RG0-eD-cUB" collectionClass="NSMutableArray" id="NhD-O2-fKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7n-YU-dG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="1072.7136431784108"/>
         </scene>
     </scenes>
 </document>

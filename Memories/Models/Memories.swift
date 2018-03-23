@@ -24,6 +24,7 @@ class Memories {
         set {
             for index in cards.indices {
                 cards[index].isFaceUp = (index == newValue)
+                cards[index].isSelected = false
             }
         }
     }
@@ -37,6 +38,8 @@ class Memories {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
+                cards[matchIndex].isSelected = true
+                cards[index].isSelected = false
                 cards[index].isFaceUp = true
             } else {
                 // either no cards or 2 cars are face up

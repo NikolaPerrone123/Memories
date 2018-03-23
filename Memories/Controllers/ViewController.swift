@@ -67,8 +67,11 @@ class ViewController: UIViewController {
             let viewButton = cardButtons[index]
             let cardModel = game.cards[index]
             if cardModel.isFaceUp {
-                viewButton.setTitle(emoji(for: cardModel), for: .normal)
-                viewButton.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//                viewButton.setTitle(emoji(for: cardModel), for: .normal)
+//                viewButton.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                if !cardModel.isSelected{
+                    createFaceUpAnimation(viewButton, card: cardModel)
+                }
             } else {
                 viewButton.setTitle("", for: UIControlState.normal)
                 viewButton.backgroundColor = cardModel.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
@@ -94,9 +97,21 @@ class ViewController: UIViewController {
     private func newGame(){
         game.removeGame()
         emoji.removeAll()
+        emojiChoices = ["👹","💩","👻","😈","😸","🎃","😂","🤖"]
         flipCount = 0
         game = Memories(numberOfPairsOfChards: (cardButtons.count + 1) / 2, withSuffle: 20)
         updateViewFromModel()
+    }
+    
+    private func createFaceUpAnimation(_ sender : UIButton, card : Card) {
+        UIView.transition(with: sender,
+                          duration: 0.6,
+                          options: .transitionFlipFromLeft,
+                          animations: {
+                            sender.setTitle(self.emoji(for: card), for: .normal)
+                            sender.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        },
+                          completion: nil)
     }
 }
 
